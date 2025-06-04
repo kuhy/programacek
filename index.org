@@ -99,10 +99,20 @@
    - vymýšlí scénky
    - řeční při večerním nástupu (zasazuje děti do děje)
 ** Blokový vedoucí (blokáč)
-   - vymýšlí dopolední a odpolední program (tj. vše kromě ranního a
-     večerního programu)
-     - tento program také vyhodnocuje; toto vyhodnocení následně
-       předává programákovi
+   - *před táborem si připraví dopolední a odpolední program na 1 den*
+     - tj. vše kromě ranního a večerního programu, viz
+       [[#prubeh-dne][průběh dne]]
+     - výhodou tohoto přístupu je, že se snáž dělá jednotná motivace
+       celého dne
+     - v představivosti se meze nekladou; program se nemusí skládat
+       pouze z tradičních táborových her
+       - ale může se zakomponovat např. dramatická výchova, netradiční sport,
+         umělecké dovodnosti, šifrovačka nebo workshop (tanec, šití,
+         cirkus, floristika)
+       - inspiraci nemusíte čerpat pouze z [[https://www.hranostaj.cz/][Hranostaje]], ale v klubovně
+         máme spoustu zajimavých knih
+     - tento program také po jeho proběhnutí vyhodnocuje; toto
+       vyhodnocení následně předává programákovi
    - předchozí den dolaďuje připravené aktivity s programákem
    - je zodpovědný za veškeré nástupy počínaje dopoledním blokem
      (trubku mu předá programák) a konče večerním nástupem; ten již
@@ -132,7 +142,7 @@
    - plánuje a vede hygienu/bufet/kontrolu klíšťat spolu s programákem
      a hlavním vedoucím
 ** Zkouškový vedoucí
-   - před táborem jasně stanoví pravidla pro splnění zkoušky
+   - *před táborem jasně stanoví pravidla pro splnění zkoušky*
    - vede přednášku
    - děti si u něj plní zkoušku
 ** Služba v kuchyni
