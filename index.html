@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+<head>
+<!-- 2025-06-04 Wed 12:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Programáček</title>
+<meta name="author" content="Kuhy" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Programáček</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Obsah</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgcea3f20">1. Bodování</a>
+<ul>
+<li><a href="#orgf486252">1.1. Přepočet her na body</a>
+<ul>
+<li><a href="#org02d63aa">1.1.1. Etapovky</a></li>
+<li><a href="#orgd68d57b">1.1.2. Loukové hry</a></li>
+<li><a href="#org06c9b87">1.1.3. Stany</a></li>
+<li><a href="#orgf28aaae">1.1.4. Zkoušky</a></li>
+<li><a href="#org3843d28">1.1.5. Nástupy</a></li>
+<li><a href="#org16b4426">1.1.6. <span class="todo TODO">TODO</span> Služba v kuchyni</a></li>
+<li><a href="#orgb3d4188">1.1.7. Tabíčka</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org336fdef">2. Průběh dne</a>
+<ul>
+<li><a href="#org6417d1a">2.1. Úklid stanů</a></li>
+<li><a href="#org41cbe75">2.2. Snídaně</a></li>
+<li><a href="#orgc84e246">2.3. Přednášky</a></li>
+<li><a href="#org7e35d86">2.4. Polední klid</a></li>
+<li><a href="#orgf49b0bb">2.5. Příprava na večerní nástup</a></li>
+<li><a href="#org8734718">2.6. Večerní nástup</a></li>
+<li><a href="#org4490061">2.7. Večerní hygiena</a></li>
+<li><a href="#org14df5dd">2.8. Večerní porada</a></li>
+</ul>
+</li>
+<li><a href="#org13a32ec">3. Role na táboře</a>
+<ul>
+<li><a href="#org95cf8fc">3.1. Programový vedoucí (programák)</a></li>
+<li><a href="#org3616023">3.2. Příběhový vedoucí (příběhák)</a></li>
+<li><a href="#org3b54d93">3.3. Vedoucí dne</a></li>
+<li><a href="#org62aa604">3.4. Družinkový vedoucí (a jejich instruktoři)</a>
+<ul>
+<li><a href="#org3c11ed6">3.4.1. Družinka dne a její vedoucí</a></li>
+</ul>
+</li>
+<li><a href="#org1bb6a69">3.5. Hlavní vedoucí (hlavas)</a></li>
+<li><a href="#org34555f5">3.6. Zdravotník</a></li>
+<li><a href="#org4ef3e44">3.7. Zkouškový vedoucí</a></li>
+<li><a href="#org742d1d0">3.8. Služba v kuchyni</a></li>
+</ul>
+</li>
+<li><a href="#org8dd8d7e">4. Průběh tábora</a>
+<ul>
+<li><a href="#org6237308">4.1. Celotáborová hra</a></li>
+<li><a href="#org522d8f4">4.2. Červená nit</a></li>
+<li><a href="#orge69d1a3">4.3. Zahájení</a>
+<ul>
+<li><a href="#orga5dd73c">4.3.1. Rozdělení družinek</a></li>
+</ul>
+</li>
+<li><a href="#org9991d1d">4.4. Puťák</a></li>
+<li><a href="#org5acd30d">4.5. Zakončení</a>
+<ul>
+<li><a href="#org8754728">4.5.1. Odměny</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2b4c2c1">5. <span class="todo TODO">TODO</span> Hry/aktivity</a>
+<ul>
+<li><a href="#org6f3c945">5.1. Přednášky</a></li>
+<li><a href="#orga9b637c">5.2. Seznamovačky/ice-breakry</a></li>
+<li><a href="#org4804bd4">5.3. Etapovky</a></li>
+<li><a href="#org249182e">5.4. Úkolovky</a></li>
+<li><a href="#orgd7a0d37">5.5. Loukovky/výplňovky</a></li>
+<li><a href="#org42688d5">5.6. Mokrý program</a>
+<ul>
+<li><a href="#org47af318">5.6.1. Casino</a></li>
+</ul>
+</li>
+<li><a href="#orgf5d8b05">5.7. Rukodělky</a></li>
+</ul>
+</li>
+<li><a href="#orgba1250d">6. Zkoušky</a>
+<ul>
+<li><a href="#orgdda3771">6.1. Topografie</a>
+<ul>
+<li><a href="#orgf3ecc37">6.1.1. Mladší</a></li>
+<li><a href="#orgd8b32fd">6.1.2. Starší</a></li>
+</ul>
+</li>
+<li><a href="#orgaa2dea2">6.2. Uzly</a></li>
+<li><a href="#org3780d3c">6.3. Hlavolamy</a>
+<ul>
+<li><a href="#org796335d">6.3.1. Skládačky a rozkládačky</a></li>
+<li><a href="#orgd6fe5e8">6.3.2. Přesuny a postupy</a></li>
+<li><a href="#org8c8f4f7">6.3.3. Logické úlohy</a></li>
+<li><a href="#orgf744d78">6.3.4. Jazykové a vědomostní úlohy</a></li>
+<li><a href="#org262a68c">6.3.5. Šifry</a></li>
+</ul>
+</li>
+<li><a href="#org6ddbe33">6.4. Nová zkouška — cirkus</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcea3f20" class="outline-2">
+<h2 id="orgcea3f20"><span class="section-number-2">1.</span> Bodování</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgf486252" class="outline-3">
+<h3 id="orgf486252"><span class="section-number-3">1.1.</span> Přepočet her na body</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Jednotlivé hry se přepočítávají na body. Tyto bodu pak rozhodnou o
+pořadí týmů v daném dni. Umístění týmu rozhodne o tom kolik surovin
+daný tým získá. Musí se brát v potaz počet členů týmu u každé hry.
+Přepočítávání bodů (podle počtu členů) probíhá u každé hry předtím
+než se výsledek hry převede na výsledné body.
+</p>
+</div>
+<div id="outline-container-org02d63aa" class="outline-4">
+<h4 id="org02d63aa"><span class="section-number-4">1.1.1.</span> Etapovky</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+První tým získává 50 bodů, druhý 40, třetí 30 a poslední 20.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd68d57b" class="outline-4">
+<h4 id="orgd68d57b"><span class="section-number-4">1.1.2.</span> Loukové hry</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+První tým získává 15 bodů, druhý 10, třetí 5 a poslední 0.
+</p>
+</div>
+</div>
+<div id="outline-container-org06c9b87" class="outline-4">
+<h4 id="org06c9b87"><span class="section-number-4">1.1.3.</span> Stany</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+Za uklizený stan je 5 bodů navíc; za neuklizený je -5 bodů.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf28aaae" class="outline-4">
+<h4 id="orgf28aaae"><span class="section-number-4">1.1.4.</span> Zkoušky</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+Každý tým získá 1 bod za každou splněnou zkoušku a to i za tu splněnou v předešlých dnech.
+</p>
+</div>
+</div>
+<div id="outline-container-org3843d28" class="outline-4">
+<h4 id="org3843d28"><span class="section-number-4">1.1.5.</span> Nástupy</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<p>
+První tým získává 3 body, druhý 2 body, třetí 1 a poslední 0.
+</p>
+</div>
+</div>
+<div id="outline-container-org16b4426" class="outline-4">
+<h4 id="org16b4426"><span class="section-number-4">1.1.6.</span> <span class="todo TODO">TODO</span> Služba v kuchyni</h4>
+</div>
+<div id="outline-container-orgb3d4188" class="outline-4">
+<h4 id="orgb3d4188"><span class="section-number-4">1.1.7.</span> Tabíčka</h4>
+<div class="outline-text-4" id="text-1-1-7">
+<p>
+Tabíčko je osobní trest, takže se nezapočítává do celkového bodování.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org336fdef" class="outline-2">
+<h2 id="org336fdef"><span class="section-number-2">2.</span> Průběh dne</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Následující tabulka ukazuje čas jednotlivých táborových aktivit:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Činnost</th>
+<th scope="col" class="org-left">Čas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Budíček</td>
+<td class="org-left">7:30</td>
+</tr>
+
+<tr>
+<td class="org-left">Rozcvička, ranní hygiena</td>
+<td class="org-left">7:35 &#x2013; 8:00</td>
+</tr>
+
+<tr>
+<td class="org-left">Úklid stanů</td>
+<td class="org-left">8:00 &#x2013; 8:30</td>
+</tr>
+
+<tr>
+<td class="org-left">Snídaně</td>
+<td class="org-left">8:30 &#x2013; 9:00</td>
+</tr>
+
+<tr>
+<td class="org-left">Ranní přednášky</td>
+<td class="org-left">9:05 &#x2013; 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left">Ranní nástup</td>
+<td class="org-left">10:00 &#x2013; 10:30</td>
+</tr>
+
+<tr>
+<td class="org-left">Dopolední program</td>
+<td class="org-left">10:30 &#x2013; 12:15</td>
+</tr>
+
+<tr>
+<td class="org-left">Příprava na oběd</td>
+<td class="org-left">12:15 &#x2013; 12:30</td>
+</tr>
+
+<tr>
+<td class="org-left">Oběd</td>
+<td class="org-left">12:30 &#x2013; 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left">Polední klid</td>
+<td class="org-left">13:00 &#x2013; 14:30</td>
+</tr>
+
+<tr>
+<td class="org-left">Odpolední program</td>
+<td class="org-left">14:30 &#x2013; 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left">Příprava na večerní nástup</td>
+<td class="org-left">18:00 &#x2013; 18:10</td>
+</tr>
+
+<tr>
+<td class="org-left">Večerní nástup</td>
+<td class="org-left">18:10 &#x2013; 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left">Večeře</td>
+<td class="org-left">18:30 &#x2013; 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left">Večerní program</td>
+<td class="org-left">19:00 &#x2013; 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left">Večerní hygiena</td>
+<td class="org-left">21:00 &#x2013; 21:30</td>
+</tr>
+
+<tr>
+<td class="org-left">Večerka</td>
+<td class="org-left">21:30, 22:00</td>
+</tr>
+
+<tr>
+<td class="org-left">Večerní porada</td>
+<td class="org-left">22:00, 22:30</td>
+</tr>
+</tbody>
+</table>
+<p>
+Následující věci se musí kontrolovat v průběhu každého dne:
+</p>
+<ul class="org-ul">
+<li>zda vedoucí dne vykonává řádně svou činnost</li>
+<li>zda už vedoucí šel chystat/hrát hru</li>
+<li>zda by služba nemohla jít na hru</li>
+<li>zda je činnost rozdělena rovnoměrně</li>
+<li>zda jsou děti řádně zabaveny, pokud ne tak zaúkolovat instruktora, ať zahraje s dětmi loukovku</li>
+</ul>
+</div>
+<div id="outline-container-org6417d1a" class="outline-3">
+<h3 id="org6417d1a"><span class="section-number-3">2.1.</span> Úklid stanů</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>poslat lidi na chystání dopoledního programu</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org41cbe75" class="outline-3">
+<h3 id="org41cbe75"><span class="section-number-3">2.2.</span> Snídaně</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>popohnat přípravu ranních přednášek</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc84e246" class="outline-3">
+<h3 id="orgc84e246"><span class="section-number-3">2.3.</span> Přednášky</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>popohnat přípravu dopoledního programu</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e35d86" class="outline-3">
+<h3 id="org7e35d86"><span class="section-number-3">2.4.</span> Polední klid</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>popohnat přípravu odpoledního programu</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf49b0bb" class="outline-3">
+<h3 id="orgf49b0bb"><span class="section-number-3">2.5.</span> Příprava na večerní nástup</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Je třeba připravit následující věci:
+</p>
+<ul class="org-ul">
+<li>služba na další den</li>
+<li>bodování</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8734718" class="outline-3">
+<h3 id="org8734718"><span class="section-number-3">2.6.</span> Večerní nástup</h3>
+<div class="outline-text-3" id="text-2-6">
+<ul class="org-ul">
+<li>ztráty</li>
+<li>dopisy</li>
+<li>vyhodnocení dne</li>
+<li>rozkaz na další den</li>
+<li>střídání vedoucího dne</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4490061" class="outline-3">
+<h3 id="org4490061"><span class="section-number-3">2.7.</span> Večerní hygiena</h3>
+<div class="outline-text-3" id="text-2-7">
+<ul class="org-ul">
+<li>rozpisy hlídek</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org14df5dd" class="outline-3">
+<h3 id="org14df5dd"><span class="section-number-3">2.8.</span> Večerní porada</h3>
+<div class="outline-text-3" id="text-2-8">
+<p>
+Je třeba probrat následující věci:
+</p>
+<ul class="org-ul">
+<li>připomenout povinnosti vedoucího dne (rozcvička, bodování stanů, nástupy)</li>
+<li>vyřešit program a přiřadit k němu lidi
+<ul class="org-ul">
+<li>ranní přednášky</li>
+<li>dopolední program</li>
+<li>odpolední program</li>
+<li>večerní program</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org13a32ec" class="outline-2">
+<h2 id="org13a32ec"><span class="section-number-2">3.</span> Role na táboře</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org95cf8fc" class="outline-3">
+<h3 id="org95cf8fc"><span class="section-number-3">3.1.</span> Programový vedoucí (programák)</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>plánuje celkový harmonogram tábora</li>
+<li>vymýšlí ranní a večerní program</li>
+<li>je zodpovědný za pískání ranního programu a veškeré pískání od
+večerního nástupu do večerky (před ní předává trubku družinkovému
+vedoucímu)</li>
+<li>vyhodnocuje den na večerním nástupu</li>
+<li>aktivně komunikuje s kuchyní ohledně večeře</li>
+<li>vede večerní porady</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3616023" class="outline-3">
+<h3 id="org3616023"><span class="section-number-3">3.2.</span> Příběhový vedoucí (příběhák)</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>vymýšlí aktivity jenž nás posouvají v hlavní dějové lince</li>
+<li>vymýšlí scénky</li>
+<li>řeční při večerním nástupu (zasazuje děti do děje)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3b54d93" class="outline-3">
+<h3 id="org3b54d93"><span class="section-number-3">3.3.</span> Vedoucí dne</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>vymýšlí dopolední a odpolední program (tj. vše kromě ranního a
+večerního programu)
+<ul class="org-ul">
+<li>tento program také vyhodnocuje; toto vyhodnocení následně
+předává programákovi</li>
+</ul></li>
+<li>předchozí den dolaďuje připravené aktivity s programákem</li>
+<li>je zodpovědný za veškeré nástupy počínaje dopoledním blokem
+(trubku mu předá programák) a konče večerním nástupem; ten již
+píská hlavní vedoucí</li>
+<li>aktivně komunikuje s kuchyní ohledně oběda a svačin</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org62aa604" class="outline-3">
+<h3 id="org62aa604"><span class="section-number-3">3.4.</span> Družinkový vedoucí (a jejich instruktoři)</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>dohlíží na čistotnost družinky (tj. radí při úklidu své družince)</li>
+<li>motivuje družinku</li>
+<li>stará se o dobrou atmosféru uvnitř družinky</li>
+<li>doprovází družinku je-li to potřeba</li>
+<li>dohlíží a pomáhá svým instruktorům a to především když je
+intruktor vedoucím dne</li>
+</ul>
+</div>
+<div id="outline-container-org3c11ed6" class="outline-4">
+<h4 id="org3c11ed6"><span class="section-number-4">3.4.1.</span> Družinka dne a její vedoucí</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>střídá se každým dnem</li>
+<li>družinkový vedoucí uspává děti před daným dnem a také rozděluje hlídky</li>
+<li>stará se o večerní a ranní hygienu dětí</li>
+<li>družinka vede hlídku v noci před daným dnem</li>
+<li>vedoucí píská budíček a vede rozcvičku</li>
+<li>aktivně komunikuje s kuchyní ohledně snídaně</li>
+<li>píská snídani a poté předává trubku programákovi</li>
+<li>vedoucí boduje úklid stanů v daný den
+<ul class="org-ul">
+<li>body zapisuje do deníčku i na tabuli</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1bb6a69" class="outline-3">
+<h3 id="org1bb6a69"><span class="section-number-3">3.5.</span> Hlavní vedoucí (hlavas)</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>vede a píská večerní nástup (spolu s programákem a příběhákem)</li>
+<li>vybírá službu v kuchyni (spolu s programákem)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org34555f5" class="outline-3">
+<h3 id="org34555f5"><span class="section-number-3">3.6.</span> Zdravotník</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>plánuje a vede hygienu/bufet/kontrolu klíšťat spolu s programákem
+a hlavním vedoucím</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4ef3e44" class="outline-3">
+<h3 id="org4ef3e44"><span class="section-number-3">3.7.</span> Zkouškový vedoucí</h3>
+<div class="outline-text-3" id="text-3-7">
+<ul class="org-ul">
+<li>před táborem jasně stanoví pravidla pro splnění zkoušky</li>
+<li>vede přednášku</li>
+<li>děti si u něj plní zkoušku</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org742d1d0" class="outline-3">
+<h3 id="org742d1d0"><span class="section-number-3">3.8.</span> Služba v kuchyni</h3>
+<div class="outline-text-3" id="text-3-8">
+<ul class="org-ul">
+<li>jedno dítě z každé družinky</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8dd8d7e" class="outline-2">
+<h2 id="org8dd8d7e"><span class="section-number-2">4.</span> Průběh tábora</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Při rozdělování her do jednotlivých dnů by se měli brát v potaz následující věci:
+</p>
+<ul class="org-ul">
+<li>vedoucí dne by neměl mít etapovku</li>
+<li>vedoucí by neměl mít zároveň přednášku a dopolední etapovku</li>
+<li>náročnost her by měla být vyvážena (ne příliš mnoho fyzicky náročných her po sobě)</li>
+<li>jaké bude daný den počasí</li>
+</ul>
+<p>
+Nutno je naplánovat následující věci:
+</p>
+<ul class="org-ul">
+<li>etapové hry</li>
+<li>loukové hry či mokrý program (výplň)</li>
+<li>hygiena</li>
+<li>bufet</li>
+<li>kontrola klíšťat</li>
+</ul>
+</div>
+<div id="outline-container-org6237308" class="outline-3">
+<h3 id="org6237308"><span class="section-number-3">4.1.</span> Celotáborová hra</h3>
+</div>
+<div id="outline-container-org522d8f4" class="outline-3">
+<h3 id="org522d8f4"><span class="section-number-3">4.2.</span> Červená nit</h3>
+</div>
+<div id="outline-container-orge69d1a3" class="outline-3">
+<h3 id="orge69d1a3"><span class="section-number-3">4.3.</span> Zahájení</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orga5dd73c" class="outline-4">
+<h4 id="orga5dd73c"><span class="section-number-4">4.3.1.</span> Rozdělení družinek</h4>
+</div>
+</div>
+<div id="outline-container-org9991d1d" class="outline-3">
+<h3 id="org9991d1d"><span class="section-number-3">4.4.</span> Puťák</h3>
+</div>
+<div id="outline-container-org5acd30d" class="outline-3">
+<h3 id="org5acd30d"><span class="section-number-3">4.5.</span> Zakončení</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org8754728" class="outline-4">
+<h4 id="org8754728"><span class="section-number-4">4.5.1.</span> Odměny</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org2b4c2c1" class="outline-2">
+<h2 id="org2b4c2c1"><span class="section-number-2">5.</span> <span class="todo TODO">TODO</span> Hry/aktivity</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org6f3c945" class="outline-3">
+<h3 id="org6f3c945"><span class="section-number-3">5.1.</span> Přednášky</h3>
+</div>
+<div id="outline-container-orga9b637c" class="outline-3">
+<h3 id="orga9b637c"><span class="section-number-3">5.2.</span> Seznamovačky/ice-breakry</h3>
+</div>
+<div id="outline-container-org4804bd4" class="outline-3">
+<h3 id="org4804bd4"><span class="section-number-3">5.3.</span> Etapovky</h3>
+</div>
+<div id="outline-container-org249182e" class="outline-3">
+<h3 id="org249182e"><span class="section-number-3">5.4.</span> Úkolovky</h3>
+</div>
+<div id="outline-container-orgd7a0d37" class="outline-3">
+<h3 id="orgd7a0d37"><span class="section-number-3">5.5.</span> Loukovky/výplňovky</h3>
+</div>
+<div id="outline-container-org42688d5" class="outline-3">
+<h3 id="org42688d5"><span class="section-number-3">5.6.</span> Mokrý program</h3>
+<div class="outline-text-3" id="text-5-6">
+</div>
+<div id="outline-container-org47af318" class="outline-4">
+<h4 id="org47af318"><span class="section-number-4">5.6.1.</span> Casino</h4>
+<div class="outline-text-4" id="text-5-6-1">
+</div>
+<ol class="org-ol">
+<li><a id="org302dda2"></a>Oskar's dice<br /></li>
+<li><a id="orge882a24"></a>Penney's game<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf5d8b05" class="outline-3">
+<h3 id="orgf5d8b05"><span class="section-number-3">5.7.</span> Rukodělky</h3>
+</div>
+</div>
+<div id="outline-container-orgba1250d" class="outline-2">
+<h2 id="orgba1250d"><span class="section-number-2">6.</span> Zkoušky</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgdda3771" class="outline-3">
+<h3 id="orgdda3771"><span class="section-number-3">6.1.</span> Topografie</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+V letošní zkoušce topografie bych se chtěl (stejně jako v minulém roce)
+zaměřit především na její přesah do běžného života (autonavigace, výlety,
+vandry, stopování, mobilní telefony).
+</p>
+</div>
+<div id="outline-container-orgf3ecc37" class="outline-4">
+<h4 id="orgf3ecc37"><span class="section-number-4">6.1.1.</span> Mladší</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<p>
+Pro úspěšné zvládnutí zkoušky z topografie jsou od mladších dětí vyžadovány následující
+znalosti:
+</p>
+<ul class="org-ul">
+<li>umět rozlišit základní prvky mapy (louka, les, město, vodní plocha)</li>
+<li>základní topografické značky (základní druhy cest, kostel, nemocnice, zastávka, pramen,
+skála, rozcestník, turistický přístřešek, místo dalekého rozhledu)</li>
+<li>dokázat určit svoji polohu na mapě</li>
+<li>být schopen zorientovat mapu</li>
+<li>dokázat odhadnout délku a náročnost zadané trasy</li>
+<li>umět popsat výškový profil trasy (kde cesta klesá/stoupá)</li>
+<li>být schopen najít kam sklopit hlavu a kde doplnit zásoby</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd8b32fd" class="outline-4">
+<h4 id="orgd8b32fd"><span class="section-number-4">6.1.2.</span> Starší</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<p>
+Starší děti musí dobře ovládat veškeré znalosti z kategorie mladších. Navíc po nich budou
+vyžadovány následující dovednosti:
+</p>
+<ul class="org-ul">
+<li>znalost pokročilejších topografických značek</li>
+<li>dokázat vysvětlit pojmy jako je měřítko, legenda či sektor mapy</li>
+<li>umět popsat zeměpisnou síť (poledníky a rovnoběžky)</li>
+<li>ovládat činnost s buzolou (určit azimut daného směru a obráceně)</li>
+<li>vědět jak správně stopovat</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa2dea2" class="outline-3">
+<h3 id="orgaa2dea2"><span class="section-number-3">6.2.</span> Uzly</h3>
+</div>
+<div id="outline-container-org3780d3c" class="outline-3">
+<h3 id="org3780d3c"><span class="section-number-3">6.3.</span> Hlavolamy</h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-org796335d" class="outline-4">
+<h4 id="org796335d"><span class="section-number-4">6.3.1.</span> Skládačky a rozkládačky</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<ul class="org-ul">
+<li>puzzle, tangram, soma kostka, polyomina</li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="org867da3c"></a><span class="todo TODO">TODO</span> Koupit deskovku Blokus nebo vzít s sebou Ubongo<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgd6fe5e8" class="outline-4">
+<h4 id="orgd6fe5e8"><span class="section-number-4">6.3.2.</span> Přesuny a postupy</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<ul class="org-ul">
+<li>twisty puzzles: rubikovka 2x2x2, 3x3x3, pyraminx, skewb,
+square-1, gear cube</li>
+<li>patnácka, sokoban, klotski, přelévání vody</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8c8f4f7" class="outline-4">
+<h4 id="org8c8f4f7"><span class="section-number-4">6.3.3.</span> Logické úlohy</h4>
+<div class="outline-text-4" id="text-6-3-3">
+<ul class="org-ul">
+<li>sudoku, kakuro, sikaku</li>
+<li>bludiště (neprůchodné, zákaz zatáčení vlevo)</li>
+<li>doplňování vzorů, řad</li>
+<li><a href="https://radekpelanek.cz/logicke-ulohy/">https://radekpelanek.cz/logicke-ulohy/</a></li>
+<li><a href="https://erich-friedman.github.io/puzzle/">https://erich-friedman.github.io/puzzle/</a></li>
+<li><a href="https://pedros.works/paper-puzzle">https://pedros.works/paper-puzzle</a></li>
+<li><a href="https://puzsq.logicpuzzle.app/?kind=3">https://puzsq.logicpuzzle.app/?kind=3</a></li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="orgdfb3b2c"></a><span class="todo TODO">TODO</span> Vytisknout zadání různých úloh<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgf744d78" class="outline-4">
+<h4 id="orgf744d78"><span class="section-number-4">6.3.4.</span> Jazykové a vědomostní úlohy</h4>
+<div class="outline-text-4" id="text-6-3-4">
+<ul class="org-ul">
+<li>hádanky</li>
+<li>křížovky, osmisměrky</li>
+<li>přesmyčky</li>
+<li>maskovaná slova</li>
+<li>řazení událostí</li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="org44d7ff9"></a><span class="todo TODO">TODO</span> Vytisknout či koupit křížovky a osmisměrky pro děti<br /></li>
+</ol>
+</div>
+<div id="outline-container-org262a68c" class="outline-4">
+<h4 id="org262a68c"><span class="section-number-4">6.3.5.</span> Šifry</h4>
+<div class="outline-text-4" id="text-6-3-5">
+<ul class="org-ul">
+<li><a href="https://sifrovacky.cz/jak-hrat">https://sifrovacky.cz/jak-hrat</a></li>
+<li><a href="https://inula.sifrovacky.cz/2025/rocniky.php">https://inula.sifrovacky.cz/2025/rocniky.php</a></li>
+<li><a href="https://krutazakruta.sifrovacky.cz/">https://krutazakruta.sifrovacky.cz/</a></li>
+<li><a href="https://lamolamy.cz/sifry/seznam">https://lamolamy.cz/sifry/seznam</a></li>
+<li><a href="https://archiv.tmou.cz/archiv/index-2.html">https://archiv.tmou.cz/archiv/index-2.html</a></li>
+<li><a href="https://radekpelanek.cz/sifry-pro-deti.html">https://radekpelanek.cz/sifry-pro-deti.html</a></li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="orgf36f8a9"></a><span class="todo TODO">TODO</span> Vytisknout šifry z Tmou a jiných šifrovaček<br /></li>
+<li><a id="org74950b9"></a><span class="todo TODO">TODO</span> Vytisknout šifrovací pomůcky<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6ddbe33" class="outline-3">
+<h3 id="org6ddbe33"><span class="section-number-3">6.4.</span> Nová zkouška — cirkus</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>žonglování</li>
+<li>diabolo</li>
+<li>jednokolka</li>
+<li>slackline</li>
+<li>yoyo</li>
+<li>kendama</li>
+<li>gymnastické obruče</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Autor: Kuhy</p>
+<p class="date">Vytvořeno: 2025-06-04 Wed 12:13</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

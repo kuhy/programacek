@@ -1,0 +1,228 @@
+#+TITLE: Programáček
+#+AUTHOR: Kuhy
+#+LANGUAGE: cs
+* Bodování
+** Přepočet her na body
+   Jednotlivé hry se přepočítávají na body. Tyto bodu pak rozhodnou o
+   pořadí týmů v daném dni. Umístění týmu rozhodne o tom kolik surovin
+   daný tým získá. Musí se brát v potaz počet členů týmu u každé hry.
+   Přepočítávání bodů (podle počtu členů) probíhá u každé hry předtím
+   než se výsledek hry převede na výsledné body.
+*** Etapovky
+    První tým získává 50 bodů, druhý 40, třetí 30 a poslední 20.
+*** Loukové hry
+    První tým získává 15 bodů, druhý 10, třetí 5 a poslední 0.
+*** Stany
+    Za uklizený stan je 5 bodů navíc; za neuklizený je -5 bodů.
+*** Zkoušky
+    Každý tým získá 1 bod za každou splněnou zkoušku a to i za tu splněnou v předešlých dnech.
+*** Nástupy
+    První tým získává 3 body, druhý 2 body, třetí 1 a poslední 0.
+*** TODO Služba v kuchyni
+*** Tabíčka
+    Tabíčko je osobní trest, takže se nezapočítává do celkového bodování.
+* Průběh dne
+  Následující tabulka ukazuje čas jednotlivých táborových aktivit:
+  | Činnost                    | Čas            |
+  |----------------------------+----------------|
+  | Budíček                    | 7:30           |
+  | Rozcvička, ranní hygiena   | 7:35 -- 8:00   |
+  | Úklid stanů                | 8:00 -- 8:30   |
+  | Snídaně                    | 8:30 -- 9:00   |
+  | Ranní přednášky            | 9:05 -- 10:00  |
+  | Ranní nástup               | 10:00 -- 10:30 |
+  | Dopolední program          | 10:30 -- 12:15 |
+  | Příprava na oběd           | 12:15 -- 12:30 |
+  | Oběd                       | 12:30 -- 13:00 |
+  | Polední klid               | 13:00 -- 14:30 |
+  | Odpolední program          | 14:30 -- 18:00 |
+  | Příprava na večerní nástup | 18:00 -- 18:10 |
+  | Večerní nástup             | 18:10 -- 18:30 |
+  | Večeře                     | 18:30 -- 19:00 |
+  | Večerní program            | 19:00 -- 21:00 |
+  | Večerní hygiena            | 21:00 -- 21:30 |
+  | Večerka                    | 21:30, 22:00   |
+  | Večerní porada             | 22:00, 22:30   |
+  Následující věci se musí kontrolovat v průběhu každého dne:
+  - zda vedoucí dne vykonává řádně svou činnost
+  - zda už vedoucí šel chystat/hrát hru
+  - zda by služba nemohla jít na hru
+  - zda je činnost rozdělena rovnoměrně
+  - zda jsou děti řádně zabaveny, pokud ne tak zaúkolovat instruktora, ať zahraje s dětmi loukovku
+** Úklid stanů
+   - poslat lidi na chystání dopoledního programu
+** Snídaně
+   - popohnat přípravu ranních přednášek
+** Přednášky
+   - popohnat přípravu dopoledního programu
+** Polední klid
+   - popohnat přípravu odpoledního programu
+** Příprava na večerní nástup
+   Je třeba připravit následující věci:
+   - služba na další den
+   - bodování
+** Večerní nástup
+   - ztráty
+   - dopisy
+   - vyhodnocení dne
+   - rozkaz na další den
+   - střídání vedoucího dne
+** Večerní hygiena
+   - rozpisy hlídek
+** Večerní porada
+   Je třeba probrat následující věci:
+   - připomenout povinnosti vedoucího dne (rozcvička, bodování stanů, nástupy)
+   - vyřešit program a přiřadit k němu lidi
+     - ranní přednášky
+     - dopolední program
+     - odpolední program
+     - večerní program
+* Role na táboře
+** Programový vedoucí (programák)
+   - plánuje celkový harmonogram tábora
+   - vymýšlí ranní a večerní program
+   - je zodpovědný za pískání ranního programu a veškeré pískání od
+     večerního nástupu do večerky (před ní předává trubku družinkovému
+     vedoucímu)
+   - vyhodnocuje den na večerním nástupu
+   - aktivně komunikuje s kuchyní ohledně večeře
+   - vede večerní porady
+** Příběhový vedoucí (příběhák)
+   - vymýšlí aktivity jenž nás posouvají v hlavní dějové lince
+   - vymýšlí scénky
+   - řeční při večerním nástupu (zasazuje děti do děje)
+** Vedoucí dne
+   - vymýšlí dopolední a odpolední program (tj. vše kromě ranního a
+     večerního programu)
+     - tento program také vyhodnocuje; toto vyhodnocení následně
+       předává programákovi
+   - předchozí den dolaďuje připravené aktivity s programákem
+   - je zodpovědný za veškeré nástupy počínaje dopoledním blokem
+     (trubku mu předá programák) a konče večerním nástupem; ten již
+     píská hlavní vedoucí
+   - aktivně komunikuje s kuchyní ohledně oběda a svačin
+** Družinkový vedoucí (a jejich instruktoři)
+   - dohlíží na čistotnost družinky (tj. radí při úklidu své družince)
+   - motivuje družinku
+   - stará se o dobrou atmosféru uvnitř družinky
+   - doprovází družinku je-li to potřeba
+   - dohlíží a pomáhá svým instruktorům a to především když je
+     intruktor vedoucím dne
+*** Družinka dne a její vedoucí
+    - střídá se každým dnem
+    - družinkový vedoucí uspává děti před daným dnem a také rozděluje hlídky
+    - stará se o večerní a ranní hygienu dětí
+    - družinka vede hlídku v noci před daným dnem
+    - vedoucí píská budíček a vede rozcvičku
+    - aktivně komunikuje s kuchyní ohledně snídaně
+    - píská snídani a poté předává trubku programákovi
+    - vedoucí boduje úklid stanů v daný den
+      - body zapisuje do deníčku i na tabuli
+** Hlavní vedoucí (hlavas)
+   - vede a píská večerní nástup (spolu s programákem a příběhákem)
+   - vybírá službu v kuchyni (spolu s programákem)
+** Zdravotník
+   - plánuje a vede hygienu/bufet/kontrolu klíšťat spolu s programákem
+     a hlavním vedoucím
+** Zkouškový vedoucí
+   - před táborem jasně stanoví pravidla pro splnění zkoušky
+   - vede přednášku
+   - děti si u něj plní zkoušku
+** Služba v kuchyni
+   - jedno dítě z každé družinky
+* Průběh tábora
+  Při rozdělování her do jednotlivých dnů by se měli brát v potaz následující věci:
+  - vedoucí dne by neměl mít etapovku
+  - vedoucí by neměl mít zároveň přednášku a dopolední etapovku
+  - náročnost her by měla být vyvážena (ne příliš mnoho fyzicky náročných her po sobě)
+  - jaké bude daný den počasí
+  Nutno je naplánovat následující věci:
+  - etapové hry
+  - loukové hry či mokrý program (výplň)
+  - hygiena
+  - bufet
+  - kontrola klíšťat
+** Celotáborová hra
+** Červená nit
+** Zahájení
+*** Rozdělení družinek
+** Puťák
+** Zakončení
+*** Odměny
+* TODO Hry/aktivity
+** Přednášky
+** Seznamovačky/ice-breakry
+** Etapovky
+** Úkolovky
+** Loukovky/výplňovky
+** Mokrý program
+*** Casino
+**** Oskar's dice
+**** Penney's game
+** Rukodělky
+* Zkoušky
+** Topografie
+   V letošní zkoušce topografie bych se chtěl (stejně jako v minulém roce)
+   zaměřit především na její přesah do běžného života (autonavigace, výlety,
+   vandry, stopování, mobilní telefony).
+*** Mladší
+    Pro úspěšné zvládnutí zkoušky z topografie jsou od mladších dětí vyžadovány následující
+    znalosti:
+    - umět rozlišit základní prvky mapy (louka, les, město, vodní plocha)
+    - základní topografické značky (základní druhy cest, kostel, nemocnice, zastávka, pramen,
+      skála, rozcestník, turistický přístřešek, místo dalekého rozhledu)
+    - dokázat určit svoji polohu na mapě
+    - být schopen zorientovat mapu
+    - dokázat odhadnout délku a náročnost zadané trasy
+    - umět popsat výškový profil trasy (kde cesta klesá/stoupá)
+    - být schopen najít kam sklopit hlavu a kde doplnit zásoby
+*** Starší
+    Starší děti musí dobře ovládat veškeré znalosti z kategorie mladších. Navíc po nich budou
+    vyžadovány následující dovednosti:
+    - znalost pokročilejších topografických značek
+    - dokázat vysvětlit pojmy jako je měřítko, legenda či sektor mapy
+    - umět popsat zeměpisnou síť (poledníky a rovnoběžky)
+    - ovládat činnost s buzolou (určit azimut daného směru a obráceně)
+    - vědět jak správně stopovat
+** Uzly
+** Hlavolamy
+*** Skládačky a rozkládačky
+    - puzzle, tangram, soma kostka, polyomina
+**** TODO Koupit deskovku Blokus nebo vzít s sebou Ubongo
+*** Přesuny a postupy
+    - twisty puzzles: rubikovka 2x2x2, 3x3x3, pyraminx, skewb,
+      square-1, gear cube
+    - patnácka, sokoban, klotski, přelévání vody
+*** Logické úlohy
+    - sudoku, kakuro, sikaku
+    - bludiště (neprůchodné, zákaz zatáčení vlevo)
+    - doplňování vzorů, řad
+    - https://radekpelanek.cz/logicke-ulohy/
+    - https://erich-friedman.github.io/puzzle/
+    - https://pedros.works/paper-puzzle
+    - https://puzsq.logicpuzzle.app/?kind=3
+**** TODO Vytisknout zadání různých úloh
+*** Jazykové a vědomostní úlohy
+    - hádanky
+    - křížovky, osmisměrky
+    - přesmyčky
+    - maskovaná slova
+    - řazení událostí
+**** TODO Vytisknout či koupit křížovky a osmisměrky pro děti
+*** Šifry
+    - https://sifrovacky.cz/jak-hrat
+    - https://inula.sifrovacky.cz/2025/rocniky.php
+    - https://krutazakruta.sifrovacky.cz/
+    - https://lamolamy.cz/sifry/seznam
+    - https://archiv.tmou.cz/archiv/index-2.html
+    - https://radekpelanek.cz/sifry-pro-deti.html
+**** TODO Vytisknout šifry z Tmou a jiných šifrovaček
+**** TODO Vytisknout šifrovací pomůcky
+** Nová zkouška — cirkus
+   - žonglování
+   - diabolo
+   - jednokolka
+   - slackline
+   - yoyo
+   - kendama
+   - gymnastické obruče
