@@ -203,6 +203,8 @@
     - vědět jak správně stopovat
 ** Uzly
 ** Hlavolamy
+   Děti si vyberou 3 kategorie z nichž budou následně plnit zkoušku.
+   Obtížnost úlohy bude samozřejmě odpovídat věku dítěte.
 *** Skládačky a rozkládačky
     - puzzle, tangram, soma kostka, polyomina
 **** TODO Koupit deskovku Blokus nebo vzít s sebou Ubongo
@@ -235,7 +237,7 @@
     - https://radekpelanek.cz/sifry-pro-deti.html
 **** TODO Vytisknout šifry z Tmou a jiných šifrovaček
 **** TODO Vytisknout šifrovací pomůcky
-** Nová zkouška — cirkus
+** Návrh na novou zkoušku: cirkus
    - žonglování
    - diabolo
    - jednokolka
