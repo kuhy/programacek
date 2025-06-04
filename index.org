@@ -1,6 +1,7 @@
 #+TITLE: Programáček
 #+AUTHOR: Kuhy
 #+LANGUAGE: cs
+#+OPTIONS: html-postamble:nil
 * Bodování
 ** Přepočet her na body
    Jednotlivé hry se přepočítávají na body. Tyto bodu pak rozhodnou o
@@ -22,27 +23,30 @@
 *** Tabíčka
     Tabíčko je osobní trest, takže se nezapočítává do celkového bodování.
 * Průběh dne
+:PROPERTIES:
+:CUSTOM_ID: prubeh-dne
+:END:
   Následující tabulka ukazuje čas jednotlivých táborových aktivit:
-  | Činnost                    | Čas            |
-  |----------------------------+----------------|
-  | Budíček                    | 7:30           |
-  | Rozcvička, ranní hygiena   | 7:35 -- 8:00   |
-  | Úklid stanů                | 8:00 -- 8:30   |
-  | Snídaně                    | 8:30 -- 9:00   |
-  | Ranní přednášky            | 9:05 -- 10:00  |
-  | Ranní nástup               | 10:00 -- 10:30 |
-  | Dopolední program          | 10:30 -- 12:15 |
-  | Příprava na oběd           | 12:15 -- 12:30 |
-  | Oběd                       | 12:30 -- 13:00 |
-  | Polední klid               | 13:00 -- 14:30 |
-  | Odpolední program          | 14:30 -- 18:00 |
-  | Příprava na večerní nástup | 18:00 -- 18:10 |
-  | Večerní nástup             | 18:10 -- 18:30 |
-  | Večeře                     | 18:30 -- 19:00 |
-  | Večerní program            | 19:00 -- 21:00 |
-  | Večerní hygiena            | 21:00 -- 21:30 |
-  | Večerka                    | 21:30, 22:00   |
-  | Večerní porada             | 22:00, 22:30   |
+  | Činnost                    | Čas            | Zodpovědná osoba |
+  |----------------------------+----------------+------------------|
+  | Budíček                    | 7:30           | Vedoucí dne      |
+  | Rozcvička, ranní hygiena   | 7:35 -- 8:00   | Vedoucí dne      |
+  | Úklid stanů                | 8:00 -- 8:30   | Vedoucí dne      |
+  | Snídaně                    | 8:30 -- 9:00   | Vedoucí dne      |
+  | Ranní přednášky            | 9:05 -- 10:00  | Programák        |
+  | Ranní nástup               | 10:00 -- 10:30 | Programák        |
+  | Dopolední program          | 10:30 -- 12:15 | Blokáč           |
+  | Příprava na oběd           | 12:15 -- 12:30 | Blokáč           |
+  | Oběd                       | 12:30 -- 13:00 | Blokáč           |
+  | Polední klid               | 13:00 -- 14:30 | Blokáč           |
+  | Odpolední program          | 14:30 -- 18:00 | Blokáč           |
+  | Příprava na večerní nástup | 18:00 -- 18:10 | Programák        |
+  | Večerní nástup             | 18:10 -- 18:30 | Programák        |
+  | Večeře                     | 18:30 -- 19:00 | Programák        |
+  | Večerní program            | 19:00 -- 21:00 | Programák        |
+  | Večerní hygiena            | 21:00 -- 21:30 | Vedoucí dne      |
+  | Večerka                    | 21:30, 22:00   | Vedoucí dne      |
+  | Večerní porada             | 22:00, 22:30   | Programák        |
   Následující věci se musí kontrolovat v průběhu každého dne:
   - zda vedoucí dne vykonává řádně svou činnost
   - zda už vedoucí šel chystat/hrát hru
@@ -78,6 +82,9 @@
      - odpolední program
      - večerní program
 * Role na táboře
+:PROPERTIES:
+:CUSTOM_ID: role-na-tabore
+:END:
 ** Programový vedoucí (programák)
    - plánuje celkový harmonogram tábora
    - vymýšlí ranní a večerní program
@@ -91,7 +98,7 @@
    - vymýšlí aktivity jenž nás posouvají v hlavní dějové lince
    - vymýšlí scénky
    - řeční při večerním nástupu (zasazuje děti do děje)
-** Vedoucí dne
+** Blokový vedoucí (blokáč)
    - vymýšlí dopolední a odpolední program (tj. vše kromě ranního a
      večerního programu)
      - tento program také vyhodnocuje; toto vyhodnocení následně
@@ -101,14 +108,14 @@
      (trubku mu předá programák) a konče večerním nástupem; ten již
      píská hlavní vedoucí
    - aktivně komunikuje s kuchyní ohledně oběda a svačin
-** Družinkový vedoucí (a jejich instruktoři)
+** Družinkový vedoucí
    - dohlíží na čistotnost družinky (tj. radí při úklidu své družince)
    - motivuje družinku
    - stará se o dobrou atmosféru uvnitř družinky
    - doprovází družinku je-li to potřeba
    - dohlíží a pomáhá svým instruktorům a to především když je
-     intruktor vedoucím dne
-*** Družinka dne a její vedoucí
+     intruktor blokáč
+*** Vedoucí dne
     - střídá se každým dnem
     - družinkový vedoucí uspává děti před daným dnem a také rozděluje hlídky
     - stará se o večerní a ranní hygienu dětí
