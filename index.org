@@ -23,9 +23,9 @@
 *** Tabíčka
     Tabíčko je osobní trest, takže se nezapočítává do celkového bodování.
 * Průběh dne
-:PROPERTIES:
-:CUSTOM_ID: prubeh-dne
-:END:
+  :PROPERTIES:
+  :CUSTOM_ID: prubeh-dne
+  :END:
   Následující tabulka ukazuje čas jednotlivých táborových aktivit:
   | Činnost                    | Čas            | Zodpovědná osoba |
   |----------------------------+----------------+------------------|
@@ -82,9 +82,9 @@
      - odpolední program
      - večerní program
 * Role na táboře
-:PROPERTIES:
-:CUSTOM_ID: role-na-tabore
-:END:
+  :PROPERTIES:
+  :CUSTOM_ID: role-na-tabore
+  :END:
 ** Programový vedoucí (programák)
    - plánuje celkový harmonogram tábora
    - vymýšlí ranní a večerní program
@@ -202,7 +202,62 @@
     - ovládat činnost s buzolou (určit azimut daného směru a obráceně)
     - vědět jak správně stopovat
 ** Uzly
+   :PROPERTIES:
+   :CUSTOM_ID: uzly
+   :END:
+   Chceme se soustředit více na bezpečnost použití a správné uvázání
+   uzlů --- ne na rychlost jak tomu bylo v předchozích letech.
+   Důraz u zkoušky bude také kladen na použití v praxi, např. ukotvení
+   stanu, napnutí šňůry na prádlo, svázání kůlů k sobě.
+*** Úvazy
+**** Liščí smyčka :mladší:
+**** Lodní smyčka :mladší:
+**** [[https://www.animatedknots.com/round-turn-two-half-hitches-knot][Loďkový úvaz]] :starší:
+**** [[https://www.animatedknots.com/timber-hitch-knot][Dřevařská smyčka]] :starší:
+**** [[https://knots3d.com/en/truckers-hitch-knot][Povoznický úvaz]] :starší:
+     - vícero variant; vhodná je např. kombinace alpského motýlku a loďkového úvazu
+*** Smyčky
+**** [[https://www.animatedknots.com/figure-8-follow-through-loop-knot][Osmičkové oko]] :mladší:
+**** [[https://www.animatedknots.com/alpine-butterfly-loop-knot][Alpský motýlek]] :mladší:
+**** Vůdcovský uzel :starší:
+**** [[https://www.animatedknots.com/tumble-hitch-knot][Kovbojská smyčka]]
+**** [[https://www.animatedknots.com/noose-knot][Kravská smyčka]]
+     - lze použít např. na svázání balíku či jako laso
+*** Spojky
+**** Ambulanční uzel :mladší:
+     - musí se dát pozor, aby nevznikla křížová spojka
+**** [[https://www.fieggen.com/shoelace/twoloopknot.htm][Mašle na boty]] :mladší:
+     - váže se obdobně jako ambulanční uzel
+     - též se musí dát pozor, aby nevznikla křížová spojka
+**** Rybářská spojka :mladší:
+     - pro větší bezpečnost se používá dvojitá či trojitá
+**** Škotová spojka :mladší:
+     - používá se na spojení různě silných lan
+**** Motýlková spojka :starší:
+*** Třecí uzly
+**** Prusík :starší:
+     - v podstatě dvojitá lyščí smyčka
+     - pro větší bezpečnost se používá dvojitý prusík
+     - na tvorbu smyčky se většinou používá rybářská spojka
+**** Nastavitelná smyčka
+     - https://www.animatedknots.com/farrimond-friction-hitch-knot
+     - https://www.animatedknots.com/midshipmans-hitch-knot
+     - https://knots3d.com/en/adjustable-grip-hitch-knot
+*** Vazby
+**** [[https://www.animatedknots.com/round-lashing-knot][Spojovací vazba]] :mladší:
+**** [[https://www.animatedknots.com/diagonal-lashing-knot][Diagonální vazba]] :starší:
+**** [[https://www.animatedknots.com/square-lashing-knot][Kolmá vazba]] :starší:
+**** [[https://www.animatedknots.com/shear-lashing-knot][Souběžná vazba]] :starší:
+**** [[https://www.animatedknots.com/tripod-lashing-knot][Trojnožka]] :starší:
+*** Ostatní
+**** [[https://www.animatedknots.com/coil-unattached-rope-knot][Panenka]] :starší:
+**** [[https://www.fieggen.com/shoelace/secureknot.htm][Chirurgická mašle na boty]]
+**** [[https://www.animatedknots.com/bottle-sling-knot][Závěs na láhev]]
+**** https://www.animatedknots.com/marlinspike-hitch-knot
 ** Hlavolamy
+   :PROPERTIES:
+   :CUSTOM_ID: hlavolamy
+   :END:
    Děti si vyberou 3 kategorie z nichž budou následně plnit zkoušku.
    Obtížnost úlohy bude samozřejmě odpovídat věku dítěte.
 *** Skládačky a rozkládačky
