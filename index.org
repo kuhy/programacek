@@ -292,6 +292,8 @@
     - https://radekpelanek.cz/sifry-pro-deti.html
 **** TODO Vytisknout šifry z Tmou a jiných šifrovaček
 **** TODO Vytisknout šifrovací pomůcky
+*** Další zajímavé problémy
+    - [[https://en.wikipedia.org/wiki/Knot_theory?oldid=361657511#Knot_equivalence][ekvivalence uzlů]]
 ** Návrh na novou zkoušku: cirkus
    - žonglování
    - diabolo
@@ -300,3 +302,7 @@
    - yoyo
    - kendama
    - gymnastické obruče
+* Přílohy
+** Tabulky
+   - [[file:prilohy/harmonogram.pdf][Harmonogram]]
+   - [[file:prilohy/bodovani.pdf][Bodování]]
