@@ -19,7 +19,9 @@
     Každý tým získá 1 bod za každou splněnou zkoušku a to i za tu splněnou v předešlých dnech.
 *** Nástupy
     První tým získává 3 body, druhý 2 body, třetí 1 a poslední 0.
-*** TODO Služba v kuchyni
+*** Služba v kuchyni
+    Služba řádně plnící své povinnosti dostane 5 bodů; za zvláštní
+    zásluhy lze udělit až 10 bodů.
 *** Tabíčka
     Tabíčko je osobní trest, takže se nezapočítává do celkového bodování.
 * Průběh dne
