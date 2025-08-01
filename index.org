@@ -294,6 +294,26 @@
 **** TODO Vytisknout šifrovací pomůcky
 *** Další zajímavé problémy
     - [[https://en.wikipedia.org/wiki/Knot_theory?oldid=361657511#Knot_equivalence][ekvivalence uzlů]]
+** Přežití
+*** Mladší
+    Dovednosti, které musí zvládnout:
+    - Bezpečně postavit ohniště (s pomocí dospělého).
+    - Najít vhodné místo pro rozdělání ohně a připravit tři druhy dřeva: troud, podpal, palivo.
+    - Vysvětlit pravidla bezpečnosti při rozdělávání ohně.
+    - Rozdělat oheň zápalkami nebo zapalovačem.
+    - Najít vodní zdroj v okolí tábora (s vedoucím).
+    - Popsat, jak se voda čistí a proč ji musíme upravit.
+    - Ukázat, kde je sever podle slunce nebo přírodních znaků.
+    - Připravit si jednoduchý batůžek na nouzový výlet.
+*** Starší
+    Dovednosti, které musí zvládnout:
+    - Postavit ohniště a připravit oheň z přírodních materiálů (bez pomoci).
+    - Rozdělat oheň pomocí křesadla nebo jiné alternativní metody.
+    - Najít a zapsat minimálně 3 zdroje vody v okolí tábora.
+    - Přefiltrovat vodu přes jednoduchý přírodní filtr (např. PET láhev, látka, písek).
+    - Převařit vodu nebo popsat dezinfekci vody tabletou.
+    - Zorientovat se v terénu pomocí přírodních znaků: slunce, stín, mech, mraveniště apod.
+    - Vysvětlit, co dělat, když se ztratím (včetně signálu SOS).
 ** Návrh na novou zkoušku: cirkus
    - žonglování
    - diabolo
